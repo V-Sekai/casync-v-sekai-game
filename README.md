@@ -34,3 +34,8 @@ git checkout main
 3. **Efficiency**: With `casync`, we ensure that only changes are synced, not entire files. This saves bandwidth and storage. Having fewer versions to manage can also make this process more efficient.
   
 4. **Simplicity**: Managing a large number of versions can become complex. Retaining three major versions and their minor versions simplifies version management while still providing flexibility.
+
+
+## Other projects
+
+See also https://github.com/DanEngelbrecht/longtail
