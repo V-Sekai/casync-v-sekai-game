@@ -24,16 +24,6 @@ cd casync-v-sekai-game
 ./extract.sh
 ```
 
-## Note:
-
-- The `extract` command is used to reconstruct the original data from the `.caidx` index file.
-- Make sure that `desync` (which is the binary for `casync`) has executable permissions. If not, you can add them using the command `chmod +x ./thirdparty/desync_0.9.5_linux_amd64/desync`.
-
-## References:
-
-- [Casync Documentation](https://github.com/systemd/casync)
-- [Desync GitHub Repository](https://github.com/folbricht/desync)
-
 ## Other projects
 
 See also https://github.com/DanEngelbrecht/longtail
