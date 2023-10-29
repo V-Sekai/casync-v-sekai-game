@@ -30,4 +30,10 @@ cd casync-v-sekai-game
 
 ## Related Projects
 
-For additional information, you might find the following project interesting: [DanEngelbrecht/longtail](https://github.com/DanEngelbrecht/longtail).
+Here are some projects that are related and you might find interesting:
+
+- [Casync](https://github.com/systemd/casync): This is the official documentation for Casync, a tool that allows you to create and manage large file systems efficiently.
+
+- [Desync](https://github.com/folbricht/desync): Desync is a powerful tool for synchronizing data from one location to another. Its repository contains all the necessary files and instructions for its use.
+
+- [Longtail by DanEngelbrecht](https://github.com/DanEngelbrecht/longtail): Longtail is a robust system designed for efficient storage of large amounts of data.
