@@ -1,22 +1,26 @@
-# casync-v-sekai-game
+# V-Sekai Game: Optimizing CDN System with casync
 
-Licenses are stored as part of each caidx index.
+This document provides an overview of our optimized system for retaining major and minor versions of the V-Sekai game using `casync`.
 
-## Optimizing CDN System: Retaining Major and Minor Versions with casync
+## Overview
 
-In our optimized system, we will retain the three most recent major versions of our project. Each major version will also include its minor versions. All these versions are stored together in the main branch because we're using `casync`. Each version has its own separate Git repository, each summing up to 2GB.
+In our optimized system, we retain the three most recent major versions of our project. Each major version also includes its associated minor versions. All these versions are stored together in the main branch, thanks to the use of `casync`.
 
-## Rationale for Retaining Major and Minor Versions
+## Why Retain Major and Minor Versions?
 
-1. **Storage Management**: Each version is 2GB, retaining all versions can quickly consume storage resources. By limiting to the three most recent major versions and their minor versions, we manage our storage use effectively.
+There are several reasons why we have chosen to retain both major and minor versions:
 
-2. **Relevance**: Older versions may become less relevant over time as new features are added and bugs are fixed in newer versions. The three most recent major versions and their minor versions are likely to be the most relevant to current users.
+1. **Effective Storage Management**: Given that each version is 2GB, retaining all versions can quickly consume storage resources. By limiting ourselves to the three most recent major versions and their minor versions, we can manage our storage use more effectively.
 
-3. **Efficiency**: With `casync`, we ensure that only changes are synced, not entire files. This saves bandwidth and storage. Having fewer versions to manage can also make this process more efficient.
+2. **Maintaining Relevance**: As new features are added and bugs are fixed in newer versions, older versions may become less relevant over time. The three most recent major versions and their minor versions are likely to be the most relevant to current users.
 
-4. **Simplicity**: Managing a large number of versions can become complex. Retaining three major versions and their minor versions simplifies version management while still providing flexibility.
+3. **Increased Efficiency**: `casync` ensures that only changes are synced, not entire files. This approach saves bandwidth and storage. Having fewer versions to manage can also make this process more efficient.
 
-## Extracting V-Sekai-Game
+4. **Simplicity**: Managing a large number of versions can become complex. By retaining only three major versions and their minor versions, we simplify version management while still providing flexibility.
+
+## How to Extract V-Sekai-Game
+
+To extract the V-Sekai game, follow these steps:
 
 ```bash
 git clone https://github.com/V-Sekai/casync-v-sekai-game.git
@@ -24,6 +28,6 @@ cd casync-v-sekai-game
 ./extract.sh
 ```
 
-## Other projects
+## Related Projects
 
-See also https://github.com/DanEngelbrecht/longtail
+For additional information, you might find the following project interesting: [DanEngelbrecht/longtail](https://github.com/DanEngelbrecht/longtail).
