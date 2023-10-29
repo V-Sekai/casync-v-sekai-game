@@ -7,10 +7,12 @@
 # - [Casync Documentation](https://github.com/systemd/casync)
 # - [Desync GitHub Repository](https://github.com/folbricht/desync)
 
+set -x 
+
 build() {
   rm -rf $1.caidx
   chmod +x ./$DESYNC_COMMAND
-  ./$DESYNC_COMMAND tar --store store -i $1.caidx $1/
+  ./$DESYNC_COMMAND tar --store store --index $1.caidx $1/
 }
 
 # Detect the operating system

@@ -7,13 +7,14 @@
 # - [Casync Documentation](https://github.com/systemd/casync)
 # - [Desync GitHub Repository](https://github.com/folbricht/desync)
 
+set -x 
+
 extract_and_build() {
   rm -rf $1 $1.tar
-  mkdir -p $1
+  mkdir -p $1 ~/.local/casync-store
   chmod +x ./$DESYNC_COMMAND
-  ./$DESYNC_COMMAND untar --no-same-owner --store store -i $1.caidx $1/
+  $DESYNC_COMMAND untar --no-same-owner --cache ~/.local/casync-store --store store --index $1.caidx $1/
 }
-#./$DESYNC_COMMAND tar -i -s ./store/ ./$1.caidx $1
 
 # Detect the operating system
 OS="`uname`"

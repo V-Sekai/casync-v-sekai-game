@@ -1,0 +1,41 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2 
+      with:
+        persist-credentials: false
+
+    - name: Setup Pandoc
+      run: |
+        sudo apt-get install pandoc
+
+    - name: Convert README to HTML
+      run: |
+        pandoc -s README.md -o index.html
+
+    - name: Create build directory if not exists
+      run: |
+        mkdir -p build
+
+    - name: Move index.html to build
+      run: |
+        mv index.html build/
+
+    - name: Copy store to build
+      run: |
+        cp -r store/ build/
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages 
+        folder: build 
