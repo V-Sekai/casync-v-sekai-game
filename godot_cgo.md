@@ -47,6 +47,12 @@ func DesyncUntar(storeUrl *C.char, indexUrl *C.char, outputDir *C.char, cacheDir
 func main() {}
 ```
 
+You can build this Go package into a C static library with the following command:
+
+```go
+go build -o desync_c_interface.a -buildmode=c-archive .
+```
+
 ## Using the Updated Static Library in C Program
 
 You can then call this function from your C program like this:
