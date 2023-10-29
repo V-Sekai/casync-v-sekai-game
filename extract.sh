@@ -14,7 +14,6 @@ extract_and_build() {
   mkdir -p $1 ~/.local/casync-store
   chmod +x ./$DESYNC_COMMAND
   $DESYNC_COMMAND untar --no-same-owner --cache ~/.local/casync-store --store store --index $1.caidx $1/
-  # $DESYNC_COMMAND untar --no-same-owner --cache ~/.local/casync-store --store https://v-sekai.github.io/casync-v-sekai-game/store --index $1.caidx $1/
 }
 
 # Detect the operating system

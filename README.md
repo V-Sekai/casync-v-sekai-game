@@ -25,8 +25,18 @@ To extract the V-Sekai game, follow these steps:
 ```bash
 git clone https://github.com/V-Sekai/casync-v-sekai-game.git
 cd casync-v-sekai-game
-./extract.sh
+mkdir -p ~/.local/casync-store # Add a cache folder
+# windows operating system
+./thirdparty/desync_0.9.5_windows_amd64/desync untar --no-same-owner --cache ~/.local/casync-store --store https://v-sekai.github.io/casync-v-sekai-game/store --index https://github.com/V-Sekai/casync-v-sekai-game/raw/main/vsekai_game_windows_x86_64.caidx vsekai_game_windows_x86_64
+# Linux operating system
+./thirdparty/desync_0.9.5_linux_amd64/desync untar --no-same-owner --cache ~/.local/casync-store --store https://v-sekai.github.io/casync-v-sekai-game/store --index https://github.com/V-Sekai/casync-v-sekai-game/raw/main/vsekai_game_linux_x86_64.caidx vsekai_game_linux_x86_64
+# Macos is not functional
+./thirdparty/desync_0.9.5_darwin_amd64/desync untar --no-same-owner --cache ~/.local/casync-store --store https://v-sekai.github.io/casync-v-sekai-game/store --index https://github.com/V-Sekai/casync-v-sekai-game/raw/main/vsekai_game_macos_x86_64.caidx vsekai_game_macos_x86_64
 ```
+
+## Update repository
+
+1. Use the `build.sh` script in this repository.
 
 ## Related Projects
 
