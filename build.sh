@@ -30,6 +30,10 @@ case $OS in
     OS='Windows'
     DESYNC_COMMAND='./thirdparty/desync_0.9.5_windows_amd64/desync'
     ;;
+  'MSYS_NT-10.0-22621')
+    OS='Windows'
+    DESYNC_COMMAND='./thirdparty/desync_0.9.5_windows_amd64/desync'
+    ;;
   *) ;;
 esac
 
